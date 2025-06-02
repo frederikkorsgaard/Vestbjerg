@@ -9,5 +9,10 @@ public Kopi(String navn, double pris, int stelnummer, String status,String produ
         this.produktNavn = produktNavn;
         this.tilstand = tilstand;
     }
-    
+public String getProduktNavn() {
+    return produktNavn;
+}
+public String getTilstand() {
+    return tilstand;
+}
 }
