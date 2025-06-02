@@ -1,4 +1,5 @@
 package ui;
+import controller.OrdreController;
 
 public class OrdreUI {
     private OrdreController ordreController;

@@ -1,4 +1,6 @@
 package controller;
+import model.*;
+
 
 public class OrdreController {
     private ProduktController produktController;

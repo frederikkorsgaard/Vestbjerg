@@ -1,4 +1,6 @@
 package controller;
+import model.*;
+
 
 public class ProduktController {
     private UnikProduktContainer unikProduktContainer;
