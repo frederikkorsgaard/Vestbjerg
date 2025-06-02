@@ -1,35 +1,20 @@
 package model;
 
 
-/**
- * Lav en beskrivelse af klassen OrdreLinje her.
- * 
- * @author (dit navn her)
- * @version (versions nummer eller dato her)
- */
-public class OrdreLinje
-{
-    // instansvariabler - erstat eksemplet herunder med dine egne variabler
-    private int x;
-
-    /**
-     * Konstruktør for objekter af klassen OrdreLinje
-     */
-    public OrdreLinje()
-    {
-        // initialiser instansvariable
-        x = 0;
-    }
-
-    /**
-     * Et eksempel på en metode - erstat denne kommentar med din egen
-     * 
-     * @param  y  eksempel på en parameter til en metode
-     * @return    summen af x og y 
-     */
-    public int sampleMethod(int y)
-    {
-        // indsæt din egen kode her
-        return x + y;
-    }
+class OrdreLinje {
+    private AbstraktProdukt produkt;
+    private int antal;
+public OrdreLinje(AbstraktProdukt produkt, int antal) {
+    this.produkt = produkt;
+    this.antal = antal;
+}
+public double beregnSubtotal() {
+    return produkt.getPris() * antal;
+}
+public AbstraktProdukt getProdukt() {
+    return produkt;
+}
+public int getAntal() {
+    return antal;
+}
 }
