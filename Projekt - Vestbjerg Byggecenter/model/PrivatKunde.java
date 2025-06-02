@@ -1,35 +1,13 @@
 package model;
 
+class PrivatKunde extends Person {
+    private String kundeID;
 
-/**
- * Lav en beskrivelse af klassen PrivatKunde her.
- * 
- * @author (dit navn her)
- * @version (versions nummer eller dato her)
- */
-public class PrivatKunde
-{
-    // instansvariabler - erstat eksemplet herunder med dine egne variabler
-    private int x;
-
-    /**
-     * Konstruktør for objekter af klassen PrivatKunde
-     */
-    public PrivatKunde()
-    {
-        // initialiser instansvariable
-        x = 0;
-    }
-
-    /**
-     * Et eksempel på en metode - erstat denne kommentar med din egen
-     * 
-     * @param  y  eksempel på en parameter til en metode
-     * @return    summen af x og y 
-     */
-    public int sampleMethod(int y)
-    {
-        // indsæt din egen kode her
-        return x + y;
-    }
+public PrivatKunde(String kundeID, String fornavn, String efternavn, String email, int tlfnr, String adresse) {
+    super(fornavn, efternavn, email, tlfnr, adresse);
+    this.kundeID = kundeID;
+}
+public String getKundeID() {
+    return kundeID;
+}
 }
