@@ -1,35 +1,18 @@
 package model;
 
 
-/**
- * Lav en beskrivelse af klassen Person her.
- * 
- * @author (dit navn her)
- * @version (versions nummer eller dato her)
- */
-public class Person
-{
-    // instansvariabler - erstat eksemplet herunder med dine egne variabler
-    private int x;
-
-    /**
-     * Konstruktør for objekter af klassen Person
-     */
-    public Person()
-    {
-        // initialiser instansvariable
-        x = 0;
-    }
-
-    /**
-     * Et eksempel på en metode - erstat denne kommentar med din egen
-     * 
-     * @param  y  eksempel på en parameter til en metode
-     * @return    summen af x og y 
-     */
-    public int sampleMethod(int y)
-    {
-        // indsæt din egen kode her
-        return x + y;
-    }
+class Person {
+    private String fornavn;
+    private String efternavn;
+    private String email;
+    private int tlfnr;
+    private String adresse;
+    
+public Person(String fornavn, String efternavn, String email, int tlfnr, String adresse) {
+this.fornavn = fornavn;
+this.efternavn = efternavn;
+this.email = email;
+this.tlfnr = tlfnr;
+this.adresse = adresse;
+}
 }
