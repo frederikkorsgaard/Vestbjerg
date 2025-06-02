@@ -1,35 +1,21 @@
 package model;
 
-
-/**
- * Lav en beskrivelse af klassen UnikProdukt her.
- * 
- * @author (dit navn her)
- * @version (versions nummer eller dato her)
- */
-public class UnikProdukt
-{
-    // instansvariabler - erstat eksemplet herunder med dine egne variabler
-    private int x;
-
-    /**
-     * Konstruktør for objekter af klassen UnikProdukt
-     */
-    public UnikProdukt()
-    {
-        // initialiser instansvariable
-        x = 0;
+class UnikProdukt extends AbstraktProdukt {
+    private int stelnummer;
+    private String status;
+    
+    public UnikProdukt(String navn, double pris, int stelnummer, String status) {
+        super(navn, pris);
+        this.stelnummer = stelnummer;
+        this.status = status;
     }
-
-    /**
-     * Et eksempel på en metode - erstat denne kommentar med din egen
-     * 
-     * @param  y  eksempel på en parameter til en metode
-     * @return    summen af x og y 
-     */
-    public int sampleMethod(int y)
-    {
-        // indsæt din egen kode her
-        return x + y;
+    public int getStelnummer() {
+        return stelnummer;
+    }
+    public String getStatus() {
+        return status;
+    }
+    public void setStatus(String status) {
+        this.status = status;
     }
 }
