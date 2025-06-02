@@ -1,35 +1,16 @@
 package model;
 
-
-/**
- * Lav en beskrivelse af klassen SimpelProdukt her.
- * 
- * @author (dit navn her)
- * @version (versions nummer eller dato her)
- */
-public class SimpelProdukt
-{
-    // instansvariabler - erstat eksemplet herunder med dine egne variabler
-    private int x;
-
-    /**
-     * Konstruktør for objekter af klassen SimpelProdukt
-     */
-    public SimpelProdukt()
-    {
-        // initialiser instansvariable
-        x = 0;
+class SimpelProdukt extends AbstraktProdukt {
+    private int lagerAntal;
+    
+    public SimpelProdukt(String navn, double pris, int lagerAntal){
+        super(navn, pris);
+        this.lagerAntal = lagerAntal;
     }
-
-    /**
-     * Et eksempel på en metode - erstat denne kommentar med din egen
-     * 
-     * @param  y  eksempel på en parameter til en metode
-     * @return    summen af x og y 
-     */
-    public int sampleMethod(int y)
-    {
-        // indsæt din egen kode her
-        return x + y;
+    public void reducerLager(int antal) {
+        this.lagerAntal -= antal;
+    }
+    public int getLagerAntal() {
+        return lagerAntal;
     }
 }
