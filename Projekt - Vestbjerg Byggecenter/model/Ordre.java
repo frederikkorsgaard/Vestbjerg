@@ -1,35 +1,38 @@
 package model;
-
-
-/**
- * Lav en beskrivelse af klassen Ordre her.
- * 
- * @author (dit navn her)
- * @version (versions nummer eller dato her)
- */
-public class Ordre
-{
-    // instansvariabler - erstat eksemplet herunder med dine egne variabler
-    private int x;
-
-    /**
-     * Konstruktør for objekter af klassen Ordre
-     */
-    public Ordre()
-    {
-        // initialiser instansvariable
-        x = 0;
-    }
-
-    /**
-     * Et eksempel på en metode - erstat denne kommentar med din egen
-     * 
-     * @param  y  eksempel på en parameter til en metode
-     * @return    summen af x og y 
-     */
-    public int sampleMethod(int y)
-    {
-        // indsæt din egen kode her
-        return x + y;
-    }
+import java.util.ArrayList;
+import java.util.Date;
+class Ordre {
+    private int ordreID;
+    private String status;
+    private Date oprettetDato;
+    private PrivatKunde privatKunde;
+    private Medarbejder medarbejder;
+    private ArrayList<OrdreLinje> ordreLinjer;
+public Ordre(int ordreID, PrivatKunde privatKunde, Medarbejder medarbejder) {
+    this.ordreID = ordreID;
+    this.privatKunde = privatKunde;
+    this.medarbejder = medarbejder;
+    this.status = "Åben";
+    this.oprettetDato = new Date();
+    this.ordreLinjer = new ArrayList<>();
+    
+}
+public void tilføjOrdreLinje(OrdreLinje ordreLinje) {
+    ordreLinjer.add(ordreLinje);
+}
+public double beregnTotalPris() {
+    
+}
+public int getOrdreID() {
+    return ordreID;
+}
+public String getStatus() {
+    return status;
+}
+public void setStatus(String status) {
+    this.status = status;
+}
+public ArrayList<OrdreLinje> getOrdreLinjer() {
+    return ordreLinjer;
+}
 }
