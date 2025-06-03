@@ -17,5 +17,22 @@ public Ordre(int ordreID, PrivatKunde privatKunde, Medarbejder medarbejder) {
     this.ordreLinjer = new ArrayList<>();
     
 }
-public void tilføjOrdreLinje
+public void tilføjOrdreLinje(OrdreLinje ordreLinje) {
+    ordreLinjer.add(ordreLinje);
+}
+public double beregnTotalPris() {
+    
+}
+public int getOrdreID() {
+    return ordreID;
+}
+public String getStatus() {
+    return status;
+}
+public void setStatus(String status) {
+    this.status = status;
+}
+public List<OrdreLinje> getOrdreLinjer() {
+    return ordreLinjer;
+}
 }
