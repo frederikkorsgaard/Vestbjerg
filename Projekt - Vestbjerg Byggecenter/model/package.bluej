@@ -1,4 +1,5 @@
 #BlueJ package file
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< HEAD
@@ -45,10 +46,15 @@ objectbench.width=1256
 objectbench.height=92
 objectbench.width=742
 >>>>>>> Stashed changes
+=======
+objectbench.height=92
+objectbench.width=742
+>>>>>>> Stashed changes
 package.divider.horizontal=0.6001742160278745
 package.divider.vertical=0.6812977099236641
 package.editor.height=194
 package.editor.width=641
+<<<<<<< Updated upstream
 =======
 package.divider.horizontal=0.6001742160278745
 package.divider.vertical=0.8292268479184367
@@ -63,11 +69,17 @@ package.frame.width=1293
 package.numDependencies=4
 package.numTargets=14
 =======
+=======
+package.editor.x=0
+>>>>>>> Stashed changes
 package.editor.y=408
 package.frame.height=414
 package.frame.width=780
 package.numDependencies=0
 package.numTargets=5
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 package.showExtends=true
 package.showUses=true
@@ -79,6 +91,7 @@ readme.y=10
 target1.height=70
 target1.name=MedarbejderContainer
 target1.showInterface=false
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 <<<<<<< Updated upstream
 target1.type=AbstractTarget
@@ -128,10 +141,15 @@ target14.x=70
 <<<<<<< HEAD
 target14.y=310
 =======
+=======
+>>>>>>> Stashed changes
 target1.type=ClassTarget
 target1.width=170
 target1.x=90
 target1.y=130
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 target2.height=70
 target2.name=SimpelProduktContainer
@@ -140,6 +158,7 @@ target2.type=ClassTarget
 target2.width=180
 target2.x=910
 target2.y=150
+<<<<<<< Updated upstream
 =======
 target14.y=330
 target2.height=70
@@ -150,10 +169,13 @@ target2.width=130
 target2.x=220
 target2.y=260
 >>>>>>> 9d81bc4a955e2f31ce2b9b5d8339a0095720e4f7
+=======
+>>>>>>> Stashed changes
 target3.height=70
 target3.name=UnikProduktContainer
 target3.showInterface=false
 target3.type=ClassTarget
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 target3.width=120
 target3.x=570
@@ -167,11 +189,17 @@ target3.y=140
 =======
 target3.y=200
 >>>>>>> 9d81bc4a955e2f31ce2b9b5d8339a0095720e4f7
+=======
+target3.width=160
+target3.x=660
+target3.y=140
+>>>>>>> Stashed changes
 target4.height=70
 target4.name=OrdreContainer
 target4.showInterface=false
 target4.type=ClassTarget
 target4.width=120
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 target4.x=330
 target4.y=130
@@ -179,11 +207,16 @@ target4.y=130
 target4.x=940
 target4.y=310
 >>>>>>> 9d81bc4a955e2f31ce2b9b5d8339a0095720e4f7
+=======
+target4.x=330
+target4.y=130
+>>>>>>> Stashed changes
 target5.height=70
 target5.name=KundeContainer
 target5.showInterface=false
 target5.type=ClassTarget
 target5.width=130
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 target5.x=780
 target5.y=70
@@ -224,3 +257,7 @@ target5.y=130
 target9.x=370
 target9.y=320
 >>>>>>> 9d81bc4a955e2f31ce2b9b5d8339a0095720e4f7
+=======
+target5.x=490
+target5.y=130
+>>>>>>> Stashed changes

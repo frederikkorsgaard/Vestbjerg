@@ -19,6 +19,7 @@ package.editor.x=0
 package.editor.y=0
 package.frame.height=414
 package.frame.width=780
+<<<<<<< Updated upstream
 =======
 objectbench.height=94
 objectbench.width=777
@@ -31,6 +32,8 @@ package.editor.y=74
 package.frame.height=630
 package.frame.width=814
 >>>>>>> 9d81bc4a955e2f31ce2b9b5d8339a0095720e4f7
+=======
+>>>>>>> Stashed changes
 package.numDependencies=3
 package.numTargets=4
 package.showExtends=true
