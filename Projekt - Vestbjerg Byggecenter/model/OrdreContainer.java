@@ -1,11 +1,14 @@
 package model;
 import java.util.ArrayList;
 
-
 public class OrdreContainer {
     private static OrdreContainer instance;
     private ArrayList<Ordre> ordre;
 
+    private OrdreContainer () {
+        ordre = new ArrayList<>();
+    }
+    
     public static OrdreContainer getInstance() {
         if (instance == null) {
             instance = new OrdreContainer();
