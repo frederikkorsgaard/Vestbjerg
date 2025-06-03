@@ -1,86 +1,46 @@
 #BlueJ package file
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-dependency1.from=MedarbejderContainer
-dependency1.to=Medarbejder
-dependency1.type=UsesDependency
-dependency2.from=KundeContainer
-dependency2.to=PrivatKunde
-dependency2.type=UsesDependency
-dependency3.from=SimpelProduktContainer
-dependency3.to=SimpelProdukt
-dependency3.type=UsesDependency
-dependency4.from=UnikProduktContainer
-dependency4.to=UnikProdukt
-dependency4.type=UsesDependency
-dependency5.from=UnikProduktContainer
-dependency5.to=Kopi
-dependency5.type=UsesDependency
-dependency6.from=OrdreContainer
-dependency6.to=Ordre
-dependency6.type=UsesDependency
-objectbench.height=92
-objectbench.width=1254
-=======
-=======
->>>>>>> 9d81bc4a955e2f31ce2b9b5d8339a0095720e4f7
 dependency1.from=OrdreLinje
 dependency1.to=AbstraktProdukt
 dependency1.type=UsesDependency
-dependency2.from=Ordre
-dependency2.to=PrivatKunde
+dependency10.from=MedarbejderContainer
+dependency10.to=Medarbejder
+dependency10.type=UsesDependency
+dependency2.from=SimpelProduktContainer
+dependency2.to=SimpelProdukt
 dependency2.type=UsesDependency
-dependency3.from=Ordre
-dependency3.to=Medarbejder
+dependency3.from=OrdreContainer
+dependency3.to=Ordre
 dependency3.type=UsesDependency
 dependency4.from=Ordre
-dependency4.to=OrdreLinje
+dependency4.to=PrivatKunde
 dependency4.type=UsesDependency
+dependency5.from=Ordre
+dependency5.to=Medarbejder
+dependency5.type=UsesDependency
+dependency6.from=Ordre
+dependency6.to=OrdreLinje
+dependency6.type=UsesDependency
+dependency7.from=UnikProduktContainer
+dependency7.to=UnikProdukt
+dependency7.type=UsesDependency
+dependency8.from=UnikProduktContainer
+dependency8.to=Kopi
+dependency8.type=UsesDependency
+dependency9.from=KundeContainer
+dependency9.to=PrivatKunde
+dependency9.type=UsesDependency
 objectbench.height=93
 objectbench.width=1256
-<<<<<<< HEAD
->>>>>>> 47340508661685e485d239bc3dd1ad81d3bec51a
-=======
-objectbench.height=92
-objectbench.width=742
->>>>>>> Stashed changes
-=======
-objectbench.height=92
-objectbench.width=742
->>>>>>> Stashed changes
-package.divider.horizontal=0.6001742160278745
-package.divider.vertical=0.6812977099236641
-package.editor.height=194
-package.editor.width=641
-<<<<<<< Updated upstream
-=======
 package.divider.horizontal=0.6001742160278745
 package.divider.vertical=0.8292268479184367
 package.editor.height=468
 package.editor.width=1155
->>>>>>> 9d81bc4a955e2f31ce2b9b5d8339a0095720e4f7
 package.editor.x=0
-<<<<<<< Updated upstream
 package.editor.y=0
 package.frame.height=685
 package.frame.width=1293
-package.numDependencies=4
+package.numDependencies=10
 package.numTargets=14
-=======
-=======
-package.editor.x=0
->>>>>>> Stashed changes
-package.editor.y=408
-package.frame.height=414
-package.frame.width=780
-package.numDependencies=0
-package.numTargets=5
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 package.showExtends=true
 package.showUses=true
 readme.height=60
@@ -89,21 +49,12 @@ readme.width=48
 readme.x=10
 readme.y=10
 target1.height=70
-target1.name=MedarbejderContainer
+target1.name=AbstraktProdukt
 target1.showInterface=false
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-<<<<<<< Updated upstream
 target1.type=AbstractTarget
 target1.width=130
 target1.x=220
-target1.y=220
-=======
-target1.type=ClassTarget
-target1.width=170
-target1.x=960
-target1.y=70
->>>>>>> 9d81bc4a955e2f31ce2b9b5d8339a0095720e4f7
+target1.y=260
 target10.height=70
 target10.name=Ordre
 target10.showInterface=false
@@ -119,105 +70,52 @@ target11.width=120
 target11.x=860
 target11.y=210
 target12.height=70
-target12.name=OrdreContainer
+target12.name=Kopi
 target12.showInterface=false
 target12.type=ClassTarget
 target12.width=120
-target12.x=570
-target12.y=50
+target12.x=70
+target12.y=430
 target13.height=70
-target13.name=Kopi
+target13.name=OrdreContainer
 target13.showInterface=false
 target13.type=ClassTarget
 target13.width=120
-target13.x=70
-target13.y=430
+target13.x=570
+target13.y=50
 target14.height=70
 target14.name=UnikProdukt
 target14.showInterface=false
 target14.type=ClassTarget
 target14.width=120
 target14.x=70
-<<<<<<< HEAD
-target14.y=310
-=======
-=======
->>>>>>> Stashed changes
-target1.type=ClassTarget
-target1.width=170
-target1.x=90
-target1.y=130
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-target2.height=70
-target2.name=SimpelProduktContainer
-target2.showInterface=false
-target2.type=ClassTarget
-target2.width=180
-target2.x=910
-target2.y=150
-<<<<<<< Updated upstream
-=======
 target14.y=330
 target2.height=70
-target2.name=AbstraktProdukt
+target2.name=MedarbejderContainer
 target2.showInterface=false
-target2.type=AbstractTarget
-target2.width=130
-target2.x=220
-target2.y=260
->>>>>>> 9d81bc4a955e2f31ce2b9b5d8339a0095720e4f7
-=======
->>>>>>> Stashed changes
+target2.type=ClassTarget
+target2.width=170
+target2.x=960
+target2.y=70
 target3.height=70
-target3.name=UnikProduktContainer
+target3.name=OrdreLinje
 target3.showInterface=false
 target3.type=ClassTarget
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 target3.width=120
 target3.x=570
-<<<<<<< HEAD
-target3.y=160
-=======
-target3.width=160
-target3.x=660
-target3.y=140
->>>>>>> Stashed changes
-=======
 target3.y=200
->>>>>>> 9d81bc4a955e2f31ce2b9b5d8339a0095720e4f7
-=======
-target3.width=160
-target3.x=660
-target3.y=140
->>>>>>> Stashed changes
 target4.height=70
-target4.name=OrdreContainer
+target4.name=PrivatKunde
 target4.showInterface=false
 target4.type=ClassTarget
 target4.width=120
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-target4.x=330
-target4.y=130
-=======
 target4.x=940
 target4.y=310
->>>>>>> 9d81bc4a955e2f31ce2b9b5d8339a0095720e4f7
-=======
-target4.x=330
-target4.y=130
->>>>>>> Stashed changes
 target5.height=70
 target5.name=KundeContainer
 target5.showInterface=false
 target5.type=ClassTarget
 target5.width=130
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 target5.x=780
 target5.y=70
 target6.height=70
@@ -246,18 +144,5 @@ target9.name=SimpelProdukt
 target9.showInterface=false
 target9.type=ClassTarget
 target9.width=120
-<<<<<<< HEAD
-target9.x=380
-target9.y=300
-=======
-target5.x=490
-target5.y=130
->>>>>>> Stashed changes
-=======
 target9.x=370
 target9.y=320
->>>>>>> 9d81bc4a955e2f31ce2b9b5d8339a0095720e4f7
-=======
-target5.x=490
-target5.y=130
->>>>>>> Stashed changes
