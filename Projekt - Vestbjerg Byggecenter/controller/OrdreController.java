@@ -27,4 +27,8 @@ public class OrdreController {
     public void bekraeftOrdre() {
         ordreContainer.tilfoejOrdre(ordre);
     }
+    
+    public double getTotalPris() {
+        return ordre != null ? ordre.beregnTotalPris() : 0.0;
+    }
 }
