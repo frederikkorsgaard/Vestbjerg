@@ -32,7 +32,7 @@ public String getStatus() {
 public void setStatus(String status) {
     this.status = status;
 }
-public List<OrdreLinje> getOrdreLinjer() {
+public ArrayList<OrdreLinje> getOrdreLinjer() {
     return ordreLinjer;
 }
 }
