@@ -19,4 +19,8 @@ public class OrdreContainer {
     public void tilfoejOrdre(Ordre o) {
         ordre.add(o);
     }
+    
+    public Ordre findOrdre(int ordreID) {
+        return null;
+    }
 }

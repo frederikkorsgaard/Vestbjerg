@@ -21,7 +21,7 @@ public void tilføjOrdreLinje(OrdreLinje ordreLinje) {
     ordreLinjer.add(ordreLinje);
 }
 public double beregnTotalPris() {
-    
+    return 88.88;
 }
 public int getOrdreID() {
     return ordreID;
