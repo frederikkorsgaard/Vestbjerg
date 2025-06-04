@@ -1,6 +1,6 @@
 package model;
 
-class Kopi extends UnikProdukt {
+public class Kopi extends UnikProdukt {
     private String produktNavn;
     private String tilstand;
     private int stelnummer;

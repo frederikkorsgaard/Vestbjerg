@@ -1,6 +1,6 @@
 package model;
 
-class UnikProdukt extends AbstraktProdukt {
+public class UnikProdukt extends AbstraktProdukt {
     private String status;
 
     public UnikProdukt(String navn, double pris, String status) {
