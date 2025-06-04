@@ -1,13 +1,10 @@
 package model;
 import java.util.ArrayList;
 import java.util.Date;
-<<<<<<< HEAD
-class Ordre {
+
+public class Ordre {
     private OrdreContainer ordreContainer;
     private SimpelProdukt simpelProdukt;
-=======
-public class Ordre {
->>>>>>> e27305690693fea9b1078d58ebdfbf837d959430
     private int ordreID;
     private String status;
     private Date oprettetDato;
