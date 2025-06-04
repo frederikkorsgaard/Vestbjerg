@@ -1,85 +1,140 @@
 package ui;
 import controller.OrdreController;
+import controller.MedarbejderController;
+import model.SimpelProdukt;
+import model.SimpelProduktContainer;
+import model.Medarbejder;
+import model.OrdreLinje;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class OrdreUI {
     private OrdreController ordreController;
+    private MedarbejderController medarbejderController;
     private Scanner scanner;
+    private Medarbejder medarbejderLoggetInd;
 
     public OrdreUI() {
         ordreController = new OrdreController();
+        medarbejderController = new MedarbejderController();
         scanner = new Scanner(System.in);
     }
 
-    public void opretOrdre() {
-        ordreController.opretOrdre();
-        System.out.println("Ny ordre oprettet!");
-    }
-
-    public void tilfoejKunde(int tlfNr) {
-        ordreController.tilfoejKunde(tlfNr);
-        System.out.println("Kunde tilføjet til ordre.");
-    }
-
-    public void tilfoejProdukt(String navn, int antal) {
-        ordreController.tilfoejProdukt(navn, antal);
-        System.out.println("Produkt '" + navn + "' (antal: " + antal + ") tilføjet til ordre.");
-    }
-
-    public void bekraeftOrdre() {
-        ordreController.bekraeftOrdre();
-        System.out.println("Ordre bekræftet og gemt!");
+    
+    //Medarbejder Login
+    public void medarbejderLogin(){
+        System.out.println("=== Medarbejder Login ===");
+        System.out.println("Tilgængelige medarbejdere:");
+        System.out.println("ID: 1 - Frederik Korsgaard (Sælger)");
+        System.out.println("ID: 2 - Jonathan Nicolai Dyndgaard (Sælger)");
+        System.out.println("ID: 3 - Jakob Førby Pedersen (Sælger)");
+        System.out.println("==========================");
+        System.out.print("Indtast medarbejder ID: ");
+        
+        int medarbejderID = scanner.nextInt();
+        Medarbejder medarbejder = medarbejderController.findMedarbejder(medarbejderID);
+        
+        if (medarbejder != null) {
+            medarbejderLoggetInd = medarbejder;
+            System.out.println("Login succesfuldt! Velkommen " + medarbejder.getNavn() + " (" + medarbejder.getRolle() + ")");
+            System.out.println("===============================");
+        } else {
+            System.out.println("Medarbejder ikke fundet. Prøv igen.");
+            medarbejderLogin(); 
+        }
     }
     
-    public double getTotalPris() {
-        return ordreController.getTotalPris();
+    private void visTilgaengeligeProdukter() {
+        System.out.println("=== Tilgængelige produkter ===");
+        SimpelProduktContainer produktContainer = SimpelProduktContainer.getInstance();
+        ArrayList<SimpelProdukt> produkter = produktContainer.getAlleProdukter();
+        
+        if (produkter.isEmpty()) {
+            System.out.println("Ingen produkter tilgængelige.");
+        } else {
+            for (SimpelProdukt produkt : produkter) {
+                System.out.println("- " + produkt.getBarcode() +"-"+ produkt.getNavn() + 
+                                 " (" + produkt.getPris() + " DKK)" + 
+                                 " - Lager: " + produkt.getLagerAntal());
+            }
+        }
+        System.out.println("===============================");
     }
     
-    public void startInteraktivOrdre() {
+    private void visOrdrelinjer() {
+        System.out.println("=== Ordre Oversigt ===");
+        ArrayList<OrdreLinje> ordreLinjer = ordreController.getOrdreLinjer();
+        
+        if (ordreLinjer.isEmpty()) {
+            System.out.println("Ingen produkter i ordren.");
+        } else {
+            System.out.println("Produkter i ordren:");
+            for (OrdreLinje linje : ordreLinjer) {
+                System.out.println("- " + linje.getProdukt().getNavn() + 
+                                 " | Antal: " + linje.getAntal() + 
+                                 " | Pris pr. stk: " + linje.getProdukt().getPris() + " DKK" +
+                                 " | Subtotal: " + linje.getSubtotal() + " DKK");
+            }
+        }
+    }
+    
+    public void RunSystem() {
         System.out.println("=== Velkommen til Vestbjerg Byggecenter ===");
-        System.out.println("Tilgængelige produkter:");
-        System.out.println("- Hammer (199.99 DKK)");
-        System.out.println("- Skruetrækker (89.99 DKK)");
-        System.out.println("- Sav (299.99 DKK)");
-        System.out.println("- Unik Græsslåmaskine: Stelnummer: 9393939 (1599.99 DKK)");
-        System.out.println("- Unik El-cykel: Stelnummer: 3939393 (11899.99 DKK)");
+        
+        // Medarbejder login skal benyttes før der kan forsættes.
+        medarbejderLogin();
+        
+        System.out.println("Kunder med telefonnumre 12345678 (Jens Jensen) og 87654321 (Jon Crispy)");
         System.out.println("============================================");
         
         // Opret ny ordre
-        opretOrdre();
+        ordreController.opretOrdre();
+        System.out.println("Ny ordre oprettet!");;
+        System.out.println("===============================");
         
         // Tilføj kunde
         System.out.print("Indtast kundens telefonnummer: ");
         int tlfNr = scanner.nextInt();
-        tilfoejKunde(tlfNr);
+        ordreController.tilfoejKunde(tlfNr);
+        System.out.println("Kunde tilføjet til ordre.");
+        System.out.println("===============================");
+        
+        visTilgaengeligeProdukter();
+        System.out.println("===============================");
         
         // Tilføj produkter
         boolean tilfoejFlere = true;
         while (tilfoejFlere) {
-            scanner.nextLine(); // Clear
-            System.out.print("Indtast produktnavn: ");
-            String produktNavn = scanner.nextLine();
-            
+            System.out.print("Indtast produkt barcode: ");
+            int barcode = scanner.nextInt();
+           
             System.out.print("Indtast antal: ");
             int antal = scanner.nextInt();
             
-            tilfoejProdukt(produktNavn, antal);
+            ordreController.tilfoejProduktByBarcode(barcode, antal);
+            System.out.println("Produkt med barcode '" + barcode + "' (antal: " + antal + ") tilføjet til ordre.");
             
             System.out.print("Vil du tilføje flere produkter? (ja/nej): ");
             String svar = scanner.next();
-            tilfoejFlere = svar.equalsIgnoreCase("ja") || svar.equalsIgnoreCase("ja");
+            tilfoejFlere = svar.equalsIgnoreCase("ja");
         }
         
+        visOrdrelinjer();
+        
         // Vis total pris
-        System.out.println("\nTotal pris: " + getTotalPris() + " DKK");
+        System.out.println("\nTotal pris: " + ordreController.getTotalPris() + " DKK");
+        System.out.println("===============================");
         
         // Bekræft ordre
         System.out.print("Bekræft ordre? (ja/nej): ");
         String bekraeft = scanner.next();
-        if (bekraeft.equalsIgnoreCase("ja") || bekraeft.equalsIgnoreCase("ja")) {
-            bekraeftOrdre();
+        if (bekraeft.equalsIgnoreCase("ja")) {
+            ordreController.bekraeftOrdre();
+            System.out.println("Ordre bekræftet og gemt!");
+            System.out.println("===============================");
         } else {
             System.out.println("Ordre ikke bekræftet.");
+            System.out.println("===============================");
         }
     }
     
