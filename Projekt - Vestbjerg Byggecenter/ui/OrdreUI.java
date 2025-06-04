@@ -7,6 +7,7 @@ import model.Medarbejder;
 import model.OrdreLinje;
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 
 public class OrdreUI {
     private OrdreController ordreController;
@@ -108,10 +109,7 @@ public class OrdreUI {
             System.out.print("Indtast produkt barcode: ");
             try {
             int barcode = scanner.nextInt();
-            }catch(InputMismatchException e) {
-                System.out.println("Fejl: Du skal indtaste et heltal fra listen.");
-                scanner.nextLine(); // rydder den forkerte input
-           
+            
             System.out.print("Indtast antal: ");
             int antal = scanner.nextInt();
             
@@ -121,6 +119,10 @@ public class OrdreUI {
             System.out.print("Vil du tilføje flere produkter? (ja/nej): ");
             String svar = scanner.next();
             tilfoejFlere = svar.equalsIgnoreCase("ja");
+            }catch(InputMismatchException e) {
+                System.out.println("Fejl: Indtast KUN barcode.");
+                scanner.nextLine(); // rydder den forkerte input
+            }
         }
         
         visOrdrelinjer();
