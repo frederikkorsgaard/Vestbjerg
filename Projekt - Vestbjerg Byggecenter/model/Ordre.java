@@ -11,6 +11,7 @@ public class Ordre {
     private PrivatKunde privatKunde;
     private Medarbejder medarbejder;
     private ArrayList<OrdreLinje> ordreLinjer;
+    
     public Ordre(int ordreID, PrivatKunde privatKunde, Medarbejder medarbejder) {
         this.ordreID = ordreID;
         this.privatKunde = privatKunde;

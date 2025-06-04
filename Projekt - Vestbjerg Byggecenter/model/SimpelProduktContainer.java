@@ -39,4 +39,20 @@ public class SimpelProduktContainer {
         }
         return null;
     }
+    // Find produkt udfra barcode
+    public SimpelProdukt findProduktByBarcode(int barcode) {
+        int i = 0;
+        while (i < simpleProdukter.size()) {
+            if (simpleProdukter.get(i).getBarcode() == barcode) {
+                return simpleProdukter.get(i);
+            }
+            i++;
+        }
+        return null;
+    }
+
+    // Find alle produkter
+    public ArrayList<SimpelProdukt> getAlleProdukter() {
+        return new ArrayList<>(simpleProdukter);
+    }
 }

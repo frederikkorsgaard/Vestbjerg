@@ -30,13 +30,20 @@ public class OrdreController {
     public void tilfoejProdukt(String navn, int antal) {
         Produkt produkt = produktController.findProdukt(navn);
         if (produkt != null) {
-            ordre.tilfoejOrdrelinje(new OrdreLinje(produkt, antal));
+            ordre.tilføjOrdreLinje(new OrdreLinje(produkt, antal));
         }
     }
 
+    public void tilfoejProduktByBarcode(int barcode, int antal) {
+        SimpelProdukt produkt = SimpelProduktContainer.getInstance().findProduktByBarcode(barcode);
+        if (produkt != null) {
+            ordre.tilføjOrdreLinje(new OrdreLinje(produkt, antal));
+        }
+    }
+    
     public void bekraeftOrdre() {
         if (ordre != null) {
-            ordreContainer.tilfoejOrdre(ordre);
+            ordreContainer.tilføjOrdre(ordre);
         }
     }
     
