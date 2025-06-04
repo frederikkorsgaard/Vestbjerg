@@ -1,6 +1,6 @@
 package model;
 
-class Person {
+public abstract class Person {
     private String fornavn;
     private String efternavn;
     private String email;
@@ -21,5 +21,21 @@ class Person {
     
     public int getTlfnr() {
         return tlfnr;
+    }
+    
+    public String getFornavn() {
+        return fornavn;
+    }
+
+    public String getEfternavn() {
+        return efternavn;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getAdresse() {
+        return adresse;
     }
 }

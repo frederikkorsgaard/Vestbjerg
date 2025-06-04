@@ -28,7 +28,7 @@ public class OrdreController {
     }
 
     public void tilfoejProdukt(String navn, int antal) {
-        Produkt produkt = produktController.findProdukt(navn);
+        AbstraktProdukt produkt = produktController.findProdukt(navn);
         if (produkt != null) {
             ordre.tilføjOrdreLinje(new OrdreLinje(produkt, antal));
         }
