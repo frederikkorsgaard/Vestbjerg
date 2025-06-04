@@ -10,8 +10,8 @@ class OrdreController {
     public Ordre opretOrdre(int ordreID, int kundeTlf, int medarbejderID) {
         PrivatKunde kunde = kundeContainer.findKunde(kundeTlf);
         Medarbejder medarbejder = medarbejderContainer.findMedarbejder(medarbejderID);
-        if (kunde == null || medarbejder == null) return null;
-
+        if (kunde == null || medarbejder == null) 
+        return null;
         Ordre ordre = new Ordre(ordreID, kunde, medarbejder);
         ordreContainer.tilføjOrdre(ordre);
         return ordre;
