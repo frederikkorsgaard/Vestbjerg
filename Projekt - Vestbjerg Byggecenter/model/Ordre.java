@@ -3,8 +3,6 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Ordre {
-    private OrdreContainer ordreContainer;
-    private SimpelProdukt simpelProdukt;
     private int ordreID;
     private String status;
     private Date oprettetDato;
@@ -19,7 +17,6 @@ public class Ordre {
         this.status = "Oprettet";
         this.oprettetDato = new Date();
         this.ordreLinjer = new ArrayList<>();
-    
     }
     
     public void tilføjOrdreLinje(OrdreLinje ordreLinje) {
@@ -28,7 +25,7 @@ public class Ordre {
     
     public double beregnTotalPris() {
         double total = 0;
-            for (OrdreLinje linje : ordreLinjer) {
+        for (OrdreLinje linje : ordreLinjer) {
             total += linje.beregnSubtotal();
         }
         return total;
@@ -48,5 +45,25 @@ public class Ordre {
     
     public ArrayList<OrdreLinje> getOrdreLinjer() {
         return ordreLinjer;
+    }
+    
+    public PrivatKunde getKunde() {
+        return privatKunde;
+    }
+    
+    public void setKunde(PrivatKunde kunde) {
+        this.privatKunde = kunde;
+    }
+    
+    public Medarbejder getMedarbejder() {
+        return medarbejder;
+    }
+    
+    public void setMedarbejder(Medarbejder medarbejder) {
+        this.medarbejder = medarbejder;
+    }
+    
+    public Date getOprettetDato() {
+        return oprettetDato;
     }
 }

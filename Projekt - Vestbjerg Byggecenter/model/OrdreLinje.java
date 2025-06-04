@@ -1,6 +1,5 @@
 package model;
 
-
 public class OrdreLinje {
     private AbstraktProdukt produkt;
     private int antal;
@@ -12,6 +11,10 @@ public class OrdreLinje {
     
     public double beregnSubtotal() {
         return produkt.getPris() * antal;
+    }
+    
+    public double getSubtotal() {
+        return beregnSubtotal();
     }
 
     public AbstraktProdukt getProdukt() {
