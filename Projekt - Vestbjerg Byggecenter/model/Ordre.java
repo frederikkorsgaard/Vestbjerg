@@ -1,7 +1,7 @@
 package model;
 import java.util.ArrayList;
 import java.util.Date;
-class Ordre {
+public class Ordre {
     private int ordreID;
     private String status;
     private Date oprettetDato;
