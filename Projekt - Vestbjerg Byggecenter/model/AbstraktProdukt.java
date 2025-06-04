@@ -9,7 +9,7 @@ public AbstraktProdukt (String navn, double pris) {
     this.navn = navn;
     this.pris = pris;
 }
-public String getnavn() {
+public String getNavn() {
     return navn;
 }
 public double getPris() {

@@ -21,6 +21,11 @@ public class OrdreContainer {
     }
     
     public Ordre findOrdre(int ordreID) {
+        for (Ordre o : ordre) {
+            if (o.getOrdreID() == ordreID) {
+                return o;
+            }
+        }
         return null;
     }
 }

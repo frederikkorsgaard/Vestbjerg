@@ -22,6 +22,11 @@ public class SimpelProduktContainer {
     }
 
     public SimpelProdukt findProdukt(String navn) {
-        return null; // implementering mangler
+        for (SimpelProdukt p : simpleProdukter) {
+            if (p.getNavn().equalsIgnoreCase(navn)) {
+                return p;
+            }
+        }
+        return null;
     }
 }
