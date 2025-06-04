@@ -8,6 +8,7 @@ class Kopi extends UnikProdukt {
     public Kopi(String navn, double pris, int stelnummer, String status,String produktNavn, String tilstand) {
         super(navn, pris, status);
         this.produktNavn = produktNavn;
+        this.stelnummer = stelnummer;
         this.tilstand = tilstand;
     }
     
