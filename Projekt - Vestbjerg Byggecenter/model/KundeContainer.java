@@ -8,6 +8,9 @@ public class KundeContainer {
 
     private KundeContainer() {
         kunder = new ArrayList<>();
+        // Test data
+        kunder.add(new PrivatKunde("K001", "Jens", "Jensen", "jens.jensen@email.dk", 12345678, "Vestergade 12"));
+        kunder.add(new PrivatKunde("K002", "Jon", "Crispy", "jon.crispy@email.dk", 87654321, "Østergade 5"));
     }
     
     public static KundeContainer getInstance() {

@@ -9,6 +9,11 @@ public class MedarbejderContainer {
 
     private MedarbejderContainer() {
         medarbejdere = new ArrayList<>();
+        // Tilføj testdata
+        medarbejdere.add(new Medarbejder(1, "Sælger", "Frederik", "Korsgaard", "frederik.korsgaard@vestbjerg.dk", 12340001, "Nordbjergvej 1"));
+        medarbejdere.add(new Medarbejder(2, "Sælger", "Jonathan", "Nicolai Dyndgaard", "jonathan.dyndgaard@vestbjerg.dk", 12340002, "Nordbjergvej 77"));
+        medarbejdere.add(new Medarbejder(3, "Sælger", "Jakob", "Førby Pedersen", "jakob.pedersen@vestbjerg.dk", 12340003, "Nordbjergvej 31"));
+
     }
     
     public static MedarbejderContainer getInstance() {
@@ -18,8 +23,8 @@ public class MedarbejderContainer {
         return instance;
     }
     
-    public void tilføjMedarbejder(Medarbejder m) {
-        medarbejdere.add(m);
+    public void tilføjMedarbejder(Medarbejder medarbejder) {
+        medarbejdere.add(medarbejder);
     }
 
     public Medarbejder findMedarbejder(int id) {

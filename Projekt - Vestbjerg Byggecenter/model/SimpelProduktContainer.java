@@ -7,6 +7,15 @@ public class SimpelProduktContainer {
 
     private SimpelProduktContainer() {
         simpleProdukter = new ArrayList<>();
+        // Tilføj produkter - Navn, pris, antal på lager
+        simpleProdukter.add(new SimpelProdukt("Hammer", 199.99, 50));
+        simpleProdukter.add(new SimpelProdukt("Skruetrækker", 89.99, 100));
+        simpleProdukter.add(new SimpelProdukt("Sav", 299.99, 25));
+        simpleProdukter.add(new SimpelProdukt("Svensknøgle", 149.99, 70));
+        simpleProdukter.add(new SimpelProdukt("Unbrakonøglesæt", 99.99, 150));
+        simpleProdukter.add(new SimpelProdukt("Knibtang", 89.99, 60));
+        simpleProdukter.add(new SimpelProdukt("Vaterpas", 49.99, 83));
+        simpleProdukter.add(new SimpelProdukt("Hobbykniv", 39.99, 137));
     }
     
     public void tilføjProdukt(SimpelProdukt p) {

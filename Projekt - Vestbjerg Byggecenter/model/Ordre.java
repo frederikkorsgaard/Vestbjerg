@@ -2,6 +2,8 @@ package model;
 import java.util.ArrayList;
 import java.util.Date;
 class Ordre {
+    private OrdreContainer ordreContainer;
+    private SimpelProdukt simpelProdukt;
     private int ordreID;
     private String status;
     private Date oprettetDato;
@@ -12,7 +14,7 @@ class Ordre {
         this.ordreID = ordreID;
         this.privatKunde = privatKunde;
         this.medarbejder = medarbejder;
-        this.status = "Åben";
+        this.status = "Oprettet";
         this.oprettetDato = new Date();
         this.ordreLinjer = new ArrayList<>();
     
