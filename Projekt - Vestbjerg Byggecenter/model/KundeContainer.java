@@ -26,7 +26,7 @@ public class KundeContainer {
         return null;
     }
 
-    public void tilfoejKunde(PrivatKunde k) {
+    public void tilføjKunde(PrivatKunde k) {
         kunder.add(k);
     }
     

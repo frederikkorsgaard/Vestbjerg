@@ -3,10 +3,14 @@ import java.util.ArrayList;
 import model.*;
 
 
-public class MedarbejderController {
-    private MedarbejderContainer medarbejderContainer;
+class MedarbejderController {
+    private MedarbejderContainer medarbejderContainer = MedarbejderContainer.getInstance();
 
-    public Medarbejder findMedarbejder(int medarbejderID) {
-        return medarbejderContainer.getID(medarbejderID);
+    public void tilføjMedarbejder(Medarbejder m) {
+        medarbejderContainer.tilføjMedarbejder(m);
+    }
+
+    public Medarbejder findMedarbejder(int id) {
+        return medarbejderContainer.findMedarbejder(id);
     }
 }

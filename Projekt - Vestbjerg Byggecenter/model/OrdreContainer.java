@@ -16,7 +16,7 @@ public class OrdreContainer {
         return instance;
     }
 
-    public void tilfoejOrdre(Ordre o) {
+    public void tilføjOrdre(Ordre o) {
         ordre.add(o);
     }
     
