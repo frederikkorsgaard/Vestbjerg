@@ -1,17 +1,11 @@
 package model;
 
-class UnikProdukt extends AbstraktProdukt {
-    private int stelnummer;
+public class UnikProdukt extends AbstraktProdukt {
     private String status;
 
-    public UnikProdukt(String navn, double pris, int stelnummer, String status) {
+    public UnikProdukt(String navn, double pris, String status) {
         super(navn, pris);
-        this.stelnummer = stelnummer;
         this.status = status;
-    }
-
-    public int getStelnummer() {
-        return stelnummer;
     }
 
     public String getStatus() {
