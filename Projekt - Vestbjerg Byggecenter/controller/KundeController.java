@@ -1,15 +1,15 @@
 package controller;
 import model.*;
 
-class KundeController {
-    private KundeContainer kundeContainer = KundeContainer.getInstance();
+public class KundeController {
+    private KundeContainer kundeContainer;
 
-    public void tilføjKunde(PrivatKunde k) {
-        kundeContainer.tilføjKunde(k);
+    public KundeController() {
+        kundeContainer = KundeContainer.getInstance();
     }
 
-    public PrivatKunde findKunde(int tlf) {
-        return kundeContainer.findKunde(tlf);
+    public PrivatKunde findKunde(int tlfNr) {
+        return kundeContainer.getTlfNr(tlfNr);
     }
 }
 
