@@ -21,10 +21,11 @@ public class OrdreContainer {
     }
     
     public Ordre findOrdre(int ordreID) {
-        for (Ordre o : ordre) {
-            if (o.getOrdreID() == ordreID) {
-                return o;
-            }
+        int i = 0;
+            while (i < ordre.size()) {
+                if (ordre.get(i).getOrdreID() == ordreID) 
+                return ordre.get(i);
+                i++;
         }
         return null;
     }

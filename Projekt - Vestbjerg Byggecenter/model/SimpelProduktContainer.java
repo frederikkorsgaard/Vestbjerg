@@ -22,10 +22,12 @@ public class SimpelProduktContainer {
     }
 
     public SimpelProdukt findProdukt(String navn) {
-        for (SimpelProdukt p : simpleProdukter) {
-            if (p.getNavn().equalsIgnoreCase(navn)) {
-                return p;
+        int i = 0;
+        while (i < simpleProdukter.size()) {
+            if (simpleProdukter.get(i).getNavn().equalsIgnoreCase(navn)) {
+                return simpleProdukter.get(i);
             }
+            i++;
         }
         return null;
     }

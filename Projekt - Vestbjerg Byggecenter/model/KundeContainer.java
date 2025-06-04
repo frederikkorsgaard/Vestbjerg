@@ -16,12 +16,13 @@ public class KundeContainer {
         return instance;
     }
 
-    public PrivatKunde findKunde(int tlfNr) {
-        for (PrivatKunde k : kunder) {
-            if (k.getTlfnr() == tlfNr) 
-            return k;
+    public PrivatKunde findKunde(int tlf) {
+        int i = 0;
+        while (i < kunder.size()) {
+            if (kunder.get(i).getTlfnr() == tlf) return kunder.get(i);
+            i++;
         }
-        return null; 
+        return null;
     }
 
     public void tilfoejKunde(PrivatKunde k) {

@@ -21,12 +21,16 @@ public class UnikProduktContainer {
         unikkeProdukter.add(p);
     }
     
-        public Kopi findKopi(int stelnummer) {
-            for (UnikProdukt p : unikkeProdukter) {
+     public Kopi findKopi(int stelnummer) {
+        int i = 0;
+        while (i < unikkeProdukter.size()) {
+            UnikProdukt p = unikkeProdukter.get(i);
             if (p instanceof Kopi && ((Kopi)p).getStelnummer() == stelnummer) {
                 return (Kopi)p;
             }
+            i++;
         }
         return null;
     }
 }
+

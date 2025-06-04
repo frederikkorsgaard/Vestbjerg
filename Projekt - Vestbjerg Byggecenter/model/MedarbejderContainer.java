@@ -9,6 +9,7 @@ public class MedarbejderContainer {
     private MedarbejderContainer() {
         medarbejdere = new ArrayList<>();
     }
+    
     public static MedarbejderContainer getInstance() {
         if (instance == null) {
             instance = new MedarbejderContainer();
@@ -21,10 +22,10 @@ public class MedarbejderContainer {
     }
 
     public Medarbejder findMedarbejder(int id) {
-        for (Medarbejder m : medarbejdere) {
-            if (m.getID() == id) {
-            return m; 
-        }
+        int i = 0;
+        while (i < medarbejdere.size()) {
+            if (medarbejdere.get(i).getID() == id) return medarbejdere.get(i);
+            i++;
         }
         return null;
     }
