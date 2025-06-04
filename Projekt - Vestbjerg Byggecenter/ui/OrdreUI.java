@@ -106,7 +106,11 @@ public class OrdreUI {
         boolean tilfoejFlere = true;
         while (tilfoejFlere) {
             System.out.print("Indtast produkt barcode: ");
+            try {
             int barcode = scanner.nextInt();
+            }catch(InputMismatchException e) {
+                System.out.println("Fejl: Du skal indtaste et heltal fra listen.");
+                scanner.nextLine(); // rydder den forkerte input
            
             System.out.print("Indtast antal: ");
             int antal = scanner.nextInt();
