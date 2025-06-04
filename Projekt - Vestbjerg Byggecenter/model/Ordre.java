@@ -21,8 +21,13 @@ public void tilføjOrdreLinje(OrdreLinje ordreLinje) {
     ordreLinjer.add(ordreLinje);
 }
 public double beregnTotalPris() {
-    return 88.88;
+    double total = 0;
+        for (OrdreLinje linje : ordreLinjer) {
+            total += linje.beregnSubtotal();
+        }
+    return total;
 }
+
 public int getOrdreID() {
     return ordreID;
 }

@@ -21,7 +21,12 @@ public class UnikProduktContainer {
         unikkeProdukter.add(p);
     }
     
-    public Kopi findKopi(String navn) {
-        return null; // implementering mangler
+        public Kopi findKopi(int stelnummer) {
+            for (UnikProdukt p : unikkeProdukter) {
+            if (p instanceof Kopi && ((Kopi)p).getStelnummer() == stelnummer) {
+                return (Kopi)p;
+            }
+        }
+        return null;
     }
 }
