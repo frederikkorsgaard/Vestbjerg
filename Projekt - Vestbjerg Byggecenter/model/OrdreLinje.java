@@ -1,7 +1,7 @@
 package model;
 
 
-class OrdreLinje {
+public class OrdreLinje {
     private AbstraktProdukt produkt;
     private int antal;
     
