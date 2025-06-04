@@ -1,5 +1,6 @@
 package model;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class MedarbejderContainer {
@@ -29,5 +30,10 @@ public class MedarbejderContainer {
         }
         return null;
     }
+    
+     public List<Medarbejder> getAlleMedarbejdere() {
+        return new ArrayList<>(medarbejdere);
+    }
 }
+
 

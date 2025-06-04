@@ -1,7 +1,6 @@
 package model;
 import java.util.ArrayList;
 
-
 public class SimpelProduktContainer {
     private static SimpelProduktContainer instance;
     private ArrayList<SimpelProdukt> simpleProdukter;

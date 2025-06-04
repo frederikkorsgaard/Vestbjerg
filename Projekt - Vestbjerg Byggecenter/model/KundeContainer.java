@@ -1,6 +1,6 @@
 package model;
 import java.util.ArrayList;
-
+import java.util.List;
 
 public class KundeContainer {
     private static KundeContainer instance;
@@ -9,6 +9,7 @@ public class KundeContainer {
     private KundeContainer() {
         kunder = new ArrayList<>();
     }
+    
     public static KundeContainer getInstance() {
         if (instance == null) {
             instance = new KundeContainer();
@@ -27,5 +28,9 @@ public class KundeContainer {
 
     public void tilfoejKunde(PrivatKunde k) {
         kunder.add(k);
+    }
+    
+     public List<PrivatKunde> getAlleKunder() {
+        return new ArrayList<>(kunder);
     }
 }
