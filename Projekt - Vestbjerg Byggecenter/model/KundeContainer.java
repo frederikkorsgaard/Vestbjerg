@@ -17,7 +17,11 @@ public class KundeContainer {
     }
 
     public PrivatKunde findKunde(int tlfNr) {
-        return null; // implementering mangler
+        for (PrivatKunde k : kunder) {
+            if (k.getTlfnr() == tlfNr) 
+            return k;
+        }
+        return null; 
     }
 
     public void tilfoejKunde(PrivatKunde k) {

@@ -1,6 +1,6 @@
 package model;
 
-class Medarbejder extends Person {
+public class Medarbejder extends Person {
     private int medarbejderID;
     private String rolle;
     
@@ -9,9 +9,11 @@ public Medarbejder(int medarbejderID, String rolle, String fornavn, String efter
     this.medarbejderID = medarbejderID;
     this.rolle = rolle;
 }
+
 public int getID() {
     return medarbejderID;
 }
+    
 public String getRolle() {
     return rolle;
 }

@@ -21,6 +21,12 @@ public class MedarbejderContainer {
     }
 
     public Medarbejder findMedarbejder(int id) {
-        return null; // implementering mangler
+        for (Medarbejder m : medarbejdere) {
+            if (m.getID() == id) {
+            return m; 
+        }
+        }
+        return null;
     }
 }
+
