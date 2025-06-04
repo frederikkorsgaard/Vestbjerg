@@ -36,6 +36,10 @@ public class MedarbejderContainer {
         return null;
     }
     
+    public Medarbejder getID(int id) {
+        return findMedarbejder(id);
+    }
+    
      public List<Medarbejder> getAlleMedarbejdere() {
         return new ArrayList<>(medarbejdere);
     }

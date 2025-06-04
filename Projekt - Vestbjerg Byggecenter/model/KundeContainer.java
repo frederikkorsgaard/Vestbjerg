@@ -29,6 +29,10 @@ public class KundeContainer {
         return null;
     }
 
+    public PrivatKunde getTlfNr(int tlf) {
+        return findKunde(tlf);
+    }
+    
     public void tilføjKunde(PrivatKunde k) {
         kunder.add(k);
     }
