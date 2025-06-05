@@ -21,35 +21,35 @@ public class OrdreController {
         ordre = new Ordre(nextOrderId++, null, null);
     }
 
-    public void tilfoejKunde(int tlfNr) {
+    public void tilføjKunde(int tlfNr) {
         PrivatKunde kunde = kundeController.findKunde(tlfNr);
         if (kunde != null && ordre != null) {
             ordre.setKunde(kunde);
         }
     }
 
-    public void tilfoejMedarbejder(int medarbejderID) {
+    public void tilføjMedarbejder(int medarbejderID) {
         Medarbejder medarbejder = medarbejderController.findMedarbejder(medarbejderID);
         if (medarbejder != null && ordre != null) {
             ordre.setMedarbejder(medarbejder);
         }
     }
 
-    public void tilfoejProdukt(String navn, int antal) {
+    public void tilføjProdukt(String navn, int antal) {
         AbstraktProdukt produkt = produktController.findProdukt(navn);
         if (produkt != null && ordre != null) {
             ordre.tilføjOrdreLinje(new OrdreLinje(produkt, antal));
         }
     }
 
-    public void tilfoejProduktByBarcode(int barcode, int antal) {
+    public void tilføjProduktByBarcode(int barcode, int antal) {
         SimpelProdukt produkt = SimpelProduktContainer.getInstance().findProduktByBarcode(barcode);
         if (produkt != null && ordre != null) {
             ordre.tilføjOrdreLinje(new OrdreLinje(produkt, antal));
         }
     }
     
-    public void bekraeftOrdre() {
+    public void bekræftOrdre() {
         if (ordre != null) {
             ordreContainer.tilføjOrdre(ordre);
         }

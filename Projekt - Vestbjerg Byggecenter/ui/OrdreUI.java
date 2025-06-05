@@ -96,7 +96,7 @@ public class OrdreUI {
         // Tilføj kunde
         System.out.print("Indtast kundens telefonnummer: ");
         int tlfNr = scanner.nextInt();
-        ordreController.tilfoejKunde(tlfNr);
+        ordreController.tilføjKunde(tlfNr);
         System.out.println("Kunde tilføjet til ordre.");
         System.out.println("===============================");
         
@@ -104,8 +104,8 @@ public class OrdreUI {
         System.out.println("===============================");
         
         // Tilføj produkter
-        boolean tilfoejFlere = true;
-        while (tilfoejFlere) {
+        boolean tilføjFlere = true;
+        while (tilføjFlere) {
             System.out.print("Indtast produkt barcode: ");
             try {
             int barcode = scanner.nextInt();
@@ -113,12 +113,12 @@ public class OrdreUI {
             System.out.print("Indtast antal: ");
             int antal = scanner.nextInt();
             
-            ordreController.tilfoejProduktByBarcode(barcode, antal);
+            ordreController.tilføjProduktByBarcode(barcode, antal);
             System.out.println("Produkt med barcode '" + barcode + "' (antal: " + antal + ") tilføjet til ordre.");
             
             System.out.print("Vil du tilføje flere produkter? (ja/nej): ");
             String svar = scanner.next();
-            tilfoejFlere = svar.equalsIgnoreCase("ja");
+            tilføjFlere = svar.equalsIgnoreCase("ja");
             }catch(InputMismatchException e) {
                 System.out.println("Fejl: Indtast KUN barcode.");
                 scanner.nextLine(); // rydder den forkerte input
@@ -133,9 +133,9 @@ public class OrdreUI {
         
         // Bekræft ordre
         System.out.print("Bekræft ordre? (ja/nej): ");
-        String bekraeft = scanner.next();
-        if (bekraeft.equalsIgnoreCase("ja")) {
-            ordreController.bekraeftOrdre();
+        String bekræft = scanner.next();
+        if (bekræft.equalsIgnoreCase("ja")) {
+            ordreController.bekræftOrdre();
             System.out.println("Ordre bekræftet og gemt!");
             System.out.println("===============================");
         } else {
